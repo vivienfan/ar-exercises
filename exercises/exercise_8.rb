@@ -13,11 +13,16 @@ puts "Exercise 8"
 puts "----------"
 
 class Employee < ActiveRecord::Base
-  before_create :generate_password
+  #before_create :generate_password
+  after_create :update_password
 
   private
   def generate_password
     self.password = SecureRandom.base64 8
+  end
+
+  def update_password
+    self.update_attribute(:password, SecureRandom.base64(8))
   end
 end
 
