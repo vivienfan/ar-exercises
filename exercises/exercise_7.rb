@@ -34,13 +34,13 @@ class Employee < ActiveRecord::Base
   validates :store_id,    presence: true
 end
 
-invalidStore = Store.new name:"this", annual_revenue: 10, mens_apparel:false, womens_apparel:false
-invalidStore.save
-pp invalidStore.errors
+# invalidStore = Store.new name:"this", annual_revenue: 10, mens_apparel:false, womens_apparel:false
+# invalidStore.save
+# pp invalidStore.errors
 
-print 'New store name:'
-newName = STDIN.gets.chomp
-newStore = Store.new name: newName
-newStore.save
-pp newStore.errors
+# print 'New store name:'
+# newName = STDIN.gets.chomp
+# newStore = Store.new name: newName
+# newStore.save
+# pp newStore.errors
 
