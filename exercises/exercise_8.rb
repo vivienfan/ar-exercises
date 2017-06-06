@@ -13,8 +13,9 @@ puts "Exercise 8"
 puts "----------"
 
 class Employee < ActiveRecord::Base
-  #before_create :generate_password
-  after_create :update_password
+  before_save :generate_password
+  # before_create :generate_password
+  # after_create :update_password
 
   private
   def generate_password
