@@ -1,4 +1,3 @@
-require 'pg'
 require 'securerandom'
 require_relative '../setup'
 require_relative './exercise_1'
